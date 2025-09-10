@@ -1,0 +1,70 @@
+/* Apply styles to the whole page */
+body {
+  font-family: Arial, sans-serif;  /* Sets a clean and readable font */
+  background: #f0ecec;             /* Light gray background color */
+  margin: 0;                       /* Removes default margin around body */
+  padding: 0;                      /* Removes default padding inside body */
+}
+
+/* Styling the header section */
+header {
+  background: rgb(210, 86, 4);     /* Orange color background using RGB */
+  color: white;                   /* White text color */
+  text-align: center;             /* Center-aligns the text in the header */
+  padding: 20px;                  /* Adds space inside the header */
+}
+
+/* Container that holds all blog posts */
+#blog-container {
+  display: flex;                  /* Enables Flexbox layout */
+  flex-wrap: wrap;                /* Allows items to wrap to the next line */
+  justify-content: center;       /* Centers blog posts horizontally */
+  padding: 20px;                  /* Adds space around the container */
+}
+
+/* Individual blog post card style */
+.blog-post {
+  background: white;              /* White background for each card */
+  width: 300px;                   /* Fixed width for each blog post */
+  margin: 15px;                   /* Space around each blog post */
+  border-radius: 10px;            /* Rounded corners */
+  overflow: hidden;               /* Hides overflow (e.g., for rounded images) */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds soft shadow for depth */
+}
+
+/* Image inside the blog post */
+.blog-post img {
+  width: 100%;                    /* Image takes full width of the card */
+  height: 200px;                  /* Fixed height for uniformity */
+  object-fit: cover;              /* Crops and scales the image to fill without distortion */
+}
+
+/* Hover effect on blog post - shadow becomes more prominent */
+.blog-post:hover {
+  box-shadow: 10px 10px 10px 10px gray; /* Bigger shadow when hovered */
+}
+
+/* Blog post title style */
+.blog-post h2 {
+  margin: 10px;                   /* Space around the heading */
+  color: #333;                    /* Dark gray text color */
+}
+
+/* Blog post paragraph style */
+.blog-post p {
+  padding: 0 10px 10px;           /* Padding left and right = 10px, bottom = 10px */
+  color: #555;                    /* Medium gray text color for better readability */
+}
+/* Responsive design using media queries */
+@media (max-width: 768px) {
+  #blog-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .blog-post {
+    width: 45%;
+  }
+}
